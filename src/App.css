@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: #425828;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #233015;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #171f0e;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #283618;
+}
+
+.container {
+  width: 250px;
+  height: 80vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  background-color: #606c38;
+  padding: 5px;
+  box-shadow: 0 3px 5px 5px #0000003a;
+  border-radius: 5px;
+}
+
+input {
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #283618;
+  outline: none;
+  font-size: 8px;
+  padding: 5px;
+}
+
+input::placeholder {
+  color: rgb(185, 185, 185);
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+button {
+  font-size: 8px;
+  background-color: #283618;
+  border: none;
+  height: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 100ms ease-in;
+}
+
+button:hover {
+  background-color: #1b2410;
+}
+
+button:active {
+  background-color: #11160a;
+}
+
+
+.message-container {
+  display: grid;
+}
+
+.message {
+  background-color: #fefae0;
+  width: 40%;
+  border-radius: 5px;
+  font-size: 10px;
+  color: #283618;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.right {
+  justify-self: end;
+  border-bottom-right-radius: 0px;
+}
+
+.left {
+  justify-self: start;
+  border-bottom-left-radius: 0px;
 }
